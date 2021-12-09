@@ -7,14 +7,14 @@ import App from "./components/App";
 import movies from "./reducers";
 
 const store = createStore(movies);
-console.log(store);
-console.log("BEFORE State", store.getState());
+// console.log(store);
+// console.log("BEFORE State", store.getState());
 
-store.dispatch({
-  type: "ADD_MOVIES",
-  movies: [{ name: "Superman" }],
-});
+// store.dispatch({
+//   type: "ADD_MOVIES",
+//   movies: [{ name: "Superman" }],
+// });
 
-console.log("AFTER State", store.getState());
+// console.log("AFTER State", store.getState());
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<App store={store} />, document.getElementById("root"));
