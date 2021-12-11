@@ -36,9 +36,9 @@ class App extends React.Component {
   };
 
   render() {
-    const { movies } = this.props.store.getState();
+    const { movies, search } = this.props.store.getState();
 
-    console.log(this.props.store.getState());
+    // console.log(this.props.store.getState());
 
     const { list, favourites, showFavourites } = movies;
 
@@ -46,7 +46,7 @@ class App extends React.Component {
 
     return (
       <div className="App">
-        <Navbar />
+        <Navbar dispatch={this.props.store.dispatch} search={search} />
         <div className="main">
           <div className="tabs">
             <div
